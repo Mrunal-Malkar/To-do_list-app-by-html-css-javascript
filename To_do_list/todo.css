@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    transition-property: all;
+    transition-duration:1.5s;
+}
+
+#todoheading{
+    font-size:1.5rem;
+    margin-left:11.5rem;
+    font-style: normal;
+    font-weight: 700;
+}
+body{
+    background-color: #F4F1DE;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#outermostcontainer{
+    padding:3rem;
+    background-color:#FFFFFF;
+    border-radius:2rem;
+}
+
+.innercontainer{
+    width:35rem;
+    background-color:beige;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+#taskinput{
+    height:3rem;
+    width:32rem;
+    font-size: larger;
+    padding-left:1rem;
+    border-radius: 2rem;
+}
+#taskinput:hover{
+    background-color: #E07A5F;
+}
+
+#addicon{
+    font-size: 1.5rem;
+}
+#iconadd{
+    background-color: #FFFFFF;
+    height:3rem;
+    width:3rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:2rem;
+}
+#iconadd:hover{
+    background-color: #E07A5F;
+}
+.taskdiv{
+    background-color: #E07A5F;
+}
+
+.task{
+    display:flex;
+    justify-content:start;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+.taskdiv{
+    margin-top:1rem ;
+    width:32rem;
+    padding:1.7rem;
+    font-size: 1.6rem;
+    min-height:0.8rem;
+}
+
+.togglebutton{
+    margin-right:1.4rem;
+    background-color: transparent;
+}
