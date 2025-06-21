@@ -1,85 +1,94 @@
-*{
-    margin:0;
-    padding:0;
-    transition-property: all;
-    transition-duration:1.5s;
+* {
+  margin: 0;
+  padding: 0;
+  transition-property: all;
+  transition-duration: 1.5s;
 }
 
-#todoheading{
-    font-size:1.5rem;
-    margin-left:11.5rem;
-    font-style: normal;
-    font-weight: 700;
+#todoheading {
+  font-size: 1.5rem;
+  margin-left: 11.5rem;
+  font-style: normal;
+  font-weight: 700;
 }
-body{
-    background-color: #F4F1DE;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-#outermostcontainer{
-    padding:3rem;
-    background-color:#FFFFFF;
-    border-radius:2rem;
+body {
+  background-color: #f4f1de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.innercontainer{
-    width:35rem;
-    background-color:beige;
-    display:flex;
-    justify-content: start;
-    align-items: center;
-    border-radius: 2rem;
+#outermostcontainer {
+  padding: 3rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
 }
 
-#taskinput{
-    height:3rem;
-    width:32rem;
-    font-size: larger;
-    padding-left:1rem;
-    border-radius: 2rem;
-}
-#taskinput:hover{
-    background-color: #E07A5F;
+.innercontainer {
+  width: 35rem;
+  background-color: beige;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 2rem;
 }
 
-#addicon{
-    font-size: 1.5rem;
+#taskinput {
+  height: 3rem;
+  width: 32rem;
+  font-size: larger;
+  padding-left: 1rem;
+  border-radius: 2rem;
 }
-#iconadd{
-    background-color: #FFFFFF;
-    height:3rem;
-    width:3rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:2rem;
-}
-#iconadd:hover{
-    background-color: #E07A5F;
-}
-.taskdiv{
-    background-color: #E07A5F;
+#taskinput:hover {
+  background-color: #e07a5f;
 }
 
-.task{
-    display:flex;
-    justify-content:start;
-    flex-wrap:wrap;
-    align-items: center;
+#addicon {
+  font-size: 1.5rem;
+}
+#iconadd {
+  background-color: #ffffff;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+#iconadd:hover {
+  background-color: #e07a5f;
+}
+.taskdiv {
+  background-color: #e07a5f;
 }
 
-.taskdiv{
-    margin-top:1rem ;
-    width:32rem;
-    padding:1.7rem;
-    font-size: 1.6rem;
-    min-height:0.8rem;
+.task {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.togglebutton{
-    margin-right:1.4rem;
-    background-color: transparent;
+.taskdiv {
+  margin-top: 1rem;
+  width: 32rem;
+  padding: 1.7rem;
+  font-size: 1.6rem;
+  min-height: 0.8rem;
+}
+
+.togglebutton {
+  margin-right: 1.4rem;
+  background-color: transparent;
+}
+.completed-task {
+  background-color: #a8d5ba; /* لون أفتح للمنجز */
+  opacity: 0.9;
+  text-decoration: none;
+}
+.completed-task p {
+  text-decoration: none;
+  color: #333;
 }
