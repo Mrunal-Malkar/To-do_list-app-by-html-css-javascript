@@ -45,6 +45,11 @@ body{
     background-color: #E07A5F;
 }
 
+#taskinput:disabled{
+    cursor:not-allowed;
+}
+
+
 #addicon{
     font-size: 1.5rem;
 }
@@ -58,6 +63,18 @@ body{
     border-radius:2rem;
 }
 #iconadd:hover{
+    background-color: #E07A5F;
+}
+#doneicon{
+    background-color: #FFFFFF;
+    height:3rem;
+    width:3rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:2rem;
+}
+#doneicon:hover{
     background-color: #E07A5F;
 }
 .taskdiv{
