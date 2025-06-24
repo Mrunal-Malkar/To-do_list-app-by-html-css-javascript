@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="To_do_list_App/todo.css" />
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="To_do_list_App/todo.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-  </head>
-  <body>
-    <div id="outermostcontainer">
-      <h1 id="todoheading">
-        TO-DO-LIST <i class="fa-solid fa-list-check"></i>
-      </h1>
+</head>
+<body>
+  <div id="outermostcontainer">
+    <h1 id="todoheading">
+      TO-DO-LIST <i class="fa-solid fa-list-check"></i>
+    </h1>
 
-      <div class="innercontainer" id="inputarea">
-        <input type="text" id="taskinput" placeholder="Add new task?" />
-        <div id="iconadd"><i class="fa-solid fa-plus" id="addicon"></i></div>
-      </div>
-
-      <!-- المهام النشطة -->
-      <h2 style="margin-top: 2rem">Ongoing Tasks</h2>
-      <div id="tasksArea"></div>
-
-      <!-- المهام المنجزة -->
-      <h2 style="margin-top: 2rem">Completed Tasks</h2>
-      <div id="completedTasksArea"></div>
+    <div class="innercontainer" id="inputarea">
+      <input type="text" id="taskinput" placeholder="Add new task?" />
+      <select id="tasklabel">
+        <option value="None">Label</option>
+        <option value="Important">Important</option>
+        <option value="Immediate">Immediate</option>
+        <option value="Easy">Easy</option>
+        <option value="Hard">Hard</option>
+        <option value="None">None</option>
+      </select>
+      <div id="iconadd"><i class="fa-solid fa-plus" id="addicon"></i></div>
     </div>
 
-    <script src="To_do_list_App/todo.js"></script>
-  </body>
+    <!-- المهام النشطة -->
+    <h2 style="margin-top: 2rem">Ongoing Tasks</h2>
+    <div id="tasksArea"></div>
+
+    <!-- المهام المنجزة -->
+    <h2 style="margin-top: 2rem">Completed Tasks</h2>
+    <div id="completedTasksArea"></div>
+  </div>
+
+  <script src="To_do_list_App/todo.js"></script>
+</body>
 </html>

@@ -32,6 +32,7 @@ body {
   justify-content: start;
   align-items: center;
   border-radius: 2rem;
+  gap: 5px;
 }
 
 #taskinput {
@@ -67,8 +68,8 @@ body {
 .task {
   display: flex;
   justify-content: start;
-  flex-wrap: wrap;
   align-items: center;
+  width: 100%;
 }
 
 .taskdiv {
@@ -91,4 +92,33 @@ body {
 .completed-task p {
   text-decoration: none;
   color: #333;
+}
+
+.todo-task {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#tasklabel {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 3px 8px;
+  border-radius: 5px;
+  color:white;
 }
