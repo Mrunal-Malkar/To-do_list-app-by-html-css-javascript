@@ -1,47 +1,37 @@
 let iconadd = document.querySelector("#addicon");
-let taskviewarea = document.querySelector("#taskviewarea");
-let outermostcontainer = document.querySelector("#outermostcontainer");
-let taskarea = document.querySelector(".task");
 let taskinput = document.querySelector("#taskinput");
+let tasksArea = document.querySelector("#tasksArea");
+let completedTasksArea = document.querySelector("#completedTasksArea");
 
 const doingevent = () => {
-    console.log("yes");
-    let newelement = document.createElement("div");
-    newelement.innerHTML =
-        `
-    <div class="innercontainer taskdiv" id="taskviewarea">
+  if (taskinput.value.trim() === "") return; // مانضفش حاجة فاضية
 
-    <div class="task">
-        
-        <div class="toggle" id="buttondiv">
-            <i class="fa-regular fa-circle-dot togglebutton"></i>
+  let newelement = document.createElement("div");
+  newelement.innerHTML = `
+        <div class="innercontainer taskdiv">
+            <div class="task">
+                <div class="toggle" id="buttondiv">
+                    <i class="fa-regular fa-circle-dot togglebutton"></i>
+                </div>
+                <p>${taskinput.value}</p>
+            </div>
         </div>
-        <p>this is a task</p>
+    `;
 
-    </div>
+  // أضفها لمنطقة المهام النشطة
+  tasksArea.appendChild(newelement);
 
-    </div>`;
-    
-    let para = newelement.querySelector("p");
-    para.innerText = taskinput.value;
-    outermostcontainer.appendChild(newelement);
+  let toggle = newelement.querySelector(".togglebutton");
+  let para = newelement.querySelector("p");
 
+  toggle.addEventListener("click", (evt) => {
+    let taskDiv = evt.target.closest(".taskdiv");
+    taskDiv.classList.add("completed-task"); // أضف الكلاس
 
-    let toggle = newelement.querySelector(".togglebutton");
-    toggle.addEventListener("click", (evt) => {
+    completedTasksArea.appendChild(taskDiv); // انقلها للقسم المكتمل
+  });
 
-        para.style.textDecoration="line-through";
-        (evt.target.closest(".taskdiv")).style.backgroundColor="lightgreen"
-        
-        setTimeout(()=>{
-            let targetted = evt.target.closest(".taskdiv");
-            (evt.target.closest(".taskdiv")).style.backgroundColor="FFFFFF"
-            targetted.remove();},2000)
-    })
+  taskinput.value = ""; // فرّغ الإنبوت
+};
 
-taskinput.value=""
-}
-
-iconadd.addEventListener("click", () => {
-    doingevent()
-});
+iconadd.addEventListener("click", doingevent);
